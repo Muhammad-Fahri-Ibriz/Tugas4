@@ -1,0 +1,246 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Center Website</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #10172a, #243b65, #51428a);
+            color: white;
+            text-align: center;
+        }
+
+        /* NAVBAR */
+        nav {
+            background: rgba(10, 15, 35, 0.9);
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav i {
+            color: #65d6ff;
+            font-size: 25px;
+        }
+
+        nav h2 {
+            font-size: 22px;
+        }
+
+        /* HEADER */
+        header {
+            padding: 70px 20px;
+            animation: fadeIn 1.5s ease;
+        }
+
+        header h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+            color: #65d6ff;
+        }
+
+        header p {
+            color: #ddd;
+            line-height: 1.6;
+        }
+
+        /* CONTAINER */
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        /* CARD */
+        .card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255,255,255,0.15);
+            padding: 25px;
+            margin: 30px auto;
+            border-radius: 18px;
+            animation: slideUp 1s ease;
+            transition: 0.4s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            border-color: #65d6ff;
+        }
+
+        .card h2 {
+            color: #65d6ff;
+            margin-bottom: 20px;
+        }
+
+        .card h2 i {
+            margin-right: 10px;
+        }
+
+        img, video, iframe {
+            width: 100%;
+            max-width: 650px;
+            border-radius: 12px;
+        }
+
+        audio {
+            width: 100%;
+            max-width: 600px;
+        }
+
+        iframe {
+            aspect-ratio: 16 / 9;
+            border: none;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #10172a;
+            padding: 25px;
+            margin-top: 40px;
+            color: #aaa;
+        }
+
+        footer i {
+            color: #65d6ff;
+            margin: 8px;
+            font-size: 22px;
+            transition: 0.3s;
+        }
+
+        footer i:hover {
+            color: #b58aff;
+            transform: scale(1.3);
+        }
+
+        /* ANIMATION */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 30px;
+            }
+
+            .card {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <i class="fa-solid fa-photo-film"></i>
+        <h2>MEDIA CENTER</h2>
+    </nav>
+
+    <!-- HEADER -->
+    <header>
+        <h1>HTML MEDIA & LAYOUT</h1>
+        <p>
+            Selamat datang di website media sederhana.<br>
+            Menampilkan gambar, audio, video dan YouTube.
+        </p>
+    </header>
+
+    <div class="container">
+
+        <!-- GAMBAR -->
+        <div class="card">
+            <h2><i class="fa-solid fa-image"></i> Foto / Gambar</h2>
+
+            <img
+            src="Images/Logo Youtube.png"
+            alt="Foto pemandangan">
+        </div>
+
+        <!-- AUDIO -->
+        <div class="card">
+            <h2><i class="fa-solid fa-music"></i> Audio MP3</h2>
+
+            <audio controls>
+                <source src="Audio/discord - _v_an sound effects - QuickSounds.com.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+
+        <!-- VIDEO MP4 -->
+        <div class="card">
+            <h2><i class="fa-solid fa-video"></i> Video MP4</h2>
+
+            <video controls>
+                <source
+                src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+                type="video/mp4">
+            </video>
+        </div>
+
+        <!-- YOUTUBE -->
+        <div class="card">
+            <h2><i class="fa-brands fa-youtube"></i> YouTube Video</h2>
+
+            <iframe
+            src="Video/Big Buck Bunny 60fps 4K - Official Blender Foundation Short Film - Blender (1080p).mp4"
+            title="YouTube Video"
+            allowfullscreen>
+            </iframe>
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Media Center Website</p>
+        <br>
+
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-youtube"></i>
+        <i class="fa-brands fa-facebook"></i>
+
+        <p>Created with HTML & CSS</p>
+    </footer>
+
+</body>
+</html>
